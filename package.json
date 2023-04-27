@@ -1,7 +1,7 @@
 {
 	"name": "rollup-plugin-inject-code",
 	"description": "A rollup plugin for inject codes",
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0",
 	"packageManager": "pnpm@8.3.1",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
@@ -15,12 +15,11 @@
 		"typings"
 	],
 	"scripts": {
-		"build": "run-s clean build:{bundle,es5,types,docs} roll-types",
+		"build": "run-s clean build:{bundle,types,docs} roll-types",
 		"build:bundle": "rollup -c build/rollup.config.ts --configPlugin @rollup/plugin-typescript",
-		"build:es5": "cross-env BABEL_ENV=es5 pnpm build:bundle",
-		"build:types": "tsc -p src/tsconfig.declaration.json",
+		"build:types": "tsc -p src/tsconfig.json",
 		"build:docs": "rm-all docs && typedoc && prettier --write \"**/*.md\"",
-		"roll-types": "api-extractor run && rm-all temp && cp dist/index.d.ts dist/es5",
+		"roll-types": "api-extractor run && rm-all temp",
 		"watch": "pnpm build:bundle -w",
 		"pub": "tscjs scripts/publish",
 		"unpub": "tscjs scripts/unpublish",
@@ -50,6 +49,7 @@
 		"@types/jest": "^29.5.1",
 		"@types/node": "^18.16.1",
 		"chalk": "^5.2.0",
+		"consola": "^2.15.3",
 		"core-js": "^3.30.1",
 		"coveralls": "^3.1.1",
 		"cross-env": "^7.0.3",
@@ -75,15 +75,6 @@
 	"peerDependencies": {
 		"rollup": ">= 2.0.0"
 	},
-	"keywords": [
-		"rollup",
-		"plugin",
-		"inject",
-		"inject-code",
-		"inject-plugin",
-		"inject-iife",
-		"saqqdy"
-	],
 	"pnpm": {
 		"peerDependencyRules": {
 			"ignoreMissing": [
@@ -95,14 +86,23 @@
 			}
 		}
 	},
+	"keywords": [
+		"rollup",
+		"plugin",
+		"inject",
+		"inject-code",
+		"inject-plugin",
+		"inject-iife",
+		"saqqdy"
+	],
 	"license": "MIT",
 	"author": "saqqdy <saqqdy@qq.com> (https://github.com/saqqdy)",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/saqqdy/rollup-plugin-inject-code.git"
-	},
+	"homepage": "https://github.com/saqqdy/rollup-plugin-inject-code#readme",
 	"bugs": {
 		"url": "https://github.com/saqqdy/rollup-plugin-inject-code/issues"
 	},
-	"homepage": "https://github.com/saqqdy/rollup-plugin-inject-code#readme"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/saqqdy/rollup-plugin-inject-code.git"
+	}
 }

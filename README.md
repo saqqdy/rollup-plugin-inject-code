@@ -35,6 +35,8 @@ $ yarn add -D rollup-plugin-inject-code
 
 ## Usage
 
+1. use import
+
 ```js
 // rollup.config.js
 import injectCode from 'rollup-plugin-inject-code'
@@ -42,7 +44,24 @@ import injectCode from 'rollup-plugin-inject-code'
 export default {
   plugins: [
     injectCode({
-      Promise: ['es6-promise', 'Promise']
+      path: './node_modules/axios-serializer/dist/index.min.js',
+      position: 'before'
+    })
+  ]
+}
+```
+
+2. use require
+
+```js
+// rollup.config.js
+const injectCode = require('rollup-plugin-inject-code')
+
+module.exports = {
+  plugins: [
+    injectCode({
+      path: './node_modules/axios-serializer/dist/index.min.js',
+      position: 'before'
     })
   ]
 }

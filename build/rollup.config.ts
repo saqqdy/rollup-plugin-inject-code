@@ -32,10 +32,8 @@ const options: RollupOptions = {
 		}),
 		typescript({
 			compilerOptions: {
-				outDir: undefined,
 				declaration: false,
-				declarationDir: undefined,
-				target: 'es5'
+				sourceMap: true
 			}
 		}),
 		filesize({ reporter }),
@@ -44,7 +42,7 @@ const options: RollupOptions = {
 }
 
 function externalCjsEsm(id: string) {
-	return ['magic-string', 'js-cool', 'tslib', 'core-js', '@babel/runtime'].some(
+	return ['consola', 'js-cool', 'tslib', 'core-js', '@babel/runtime'].some(
 		k => id === k || new RegExp('^' + k + sep).test(id)
 	)
 }
@@ -57,12 +55,14 @@ export default [
 				file: pkg.main,
 				exports: 'auto',
 				format: 'cjs',
+				sourcemap: true,
 				banner
 			},
 			{
 				file: pkg.module,
 				exports: 'auto',
 				format: 'es',
+				sourcemap: true,
 				banner
 			}
 		],
