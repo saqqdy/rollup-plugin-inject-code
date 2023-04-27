@@ -27,7 +27,7 @@ A rollup plugin for inject codes
 $ pnpm install -D rollup-plugin-inject-code
 
 # use npm
-$ npm install -D rollup-plugin-inject-code --save
+$ npm install -D rollup-plugin-inject-code
 
 # use yarn
 $ yarn add -D rollup-plugin-inject-code
