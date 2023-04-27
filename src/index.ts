@@ -18,7 +18,9 @@ export default function injectCode(options: Options = {}): Plugin {
 		name: 'inject-code',
 		renderChunk(code) {
 			const injectCode = readFileSync(
-				require.resolve('/Users/saqqdy/www/saqqdy/rollup-plugin-inject-code/test.bak.js'),
+				require.resolve(
+					'/Users/saqqdy/www/saqqdy/rollup-plugin-inject-code/test.bak.js'
+				),
 				'utf-8'
 			)
 			return `${injectCode};\n;${code}`

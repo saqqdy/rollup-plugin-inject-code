@@ -2,43 +2,53 @@
 
 # rollup-plugin-inject-code
 
-一个自动替换`shebang`的`rollup`插件
+A rollup plugin for inject codes
 
 [![NPM version][npm-image]][npm-url]
 [![Codacy Badge][codacy-image]][codacy-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url]
-[![gzip][gzip-image]][gzip-url]
 [![License][license-image]][license-url]
 
 [![Sonar][sonar-image]][sonar-url]
 
 </div>
 
-## 安装
+<div style="text-align: center; margin-bottom: 20px;" align="center">
+
+## **For API documentation, see: [API Docs](./docs/modules.md)**
+
+</div>
+
+## Installing
 
 ```bash
-# 使用npm
-$ npm install -D rollup-plugin-inject-code
+# use pnpm
+$ pnpm install -D rollup-plugin-inject-code
 
-# 使用yarn
+# use npm
+$ npm install -D rollup-plugin-inject-code --save
+
+# use yarn
 $ yarn add -D rollup-plugin-inject-code
 ```
 
-## 使用
+## Usage
 
 ```js
-import shebang from 'rollup-plugin-inject-code'
+// rollup.config.js
+import injectCode from 'rollup-plugin-inject-code'
 
-plugins: [
-  shebang({
-    shebang: '#!/usr/bin/env node',
-    skipBackslash: true // 跳过\u005c 反斜杠
-  })
-]
+export default {
+  plugins: [
+    injectCode({
+      Promise: ['es6-promise', 'Promise']
+    })
+  ]
+}
 ```
 
-## 问题和支持
+## Support & Issues
 
 Please open an issue [here](https://github.com/saqqdy/rollup-plugin-inject-code/issues).
 
@@ -54,9 +64,7 @@ Please open an issue [here](https://github.com/saqqdy/rollup-plugin-inject-code/
 [codecov-url]: https://codecov.io/github/saqqdy/rollup-plugin-inject-code?branch=master
 [download-image]: https://img.shields.io/npm/dm/rollup-plugin-inject-code.svg?style=flat-square
 [download-url]: https://npmjs.org/package/rollup-plugin-inject-code
-[gzip-image]: http://img.badgesize.io/https://unpkg.com/rollup-plugin-inject-code/lib/index.js?compression=gzip&label=gzip%20size:%20JS
-[gzip-url]: http://img.badgesize.io/https://unpkg.com/rollup-plugin-inject-code/lib/index.js?compression=gzip&label=gzip%20size:%20JS
-[license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
 [sonar-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=saqqdy_rollup-plugin-inject-code
 [sonar-url]: https://sonarcloud.io/dashboard?id=saqqdy_rollup-plugin-inject-code
