@@ -1,0 +1,23 @@
+{
+	"cSpell.words": [
+		"Builtins",
+		"esbuild",
+		"esno",
+		"filesize",
+		"hashbang",
+		"iife",
+		"saqqdy",
+		"tscjs",
+		"tsdoc",
+		"tsnd",
+		"typedoc",
+		"unpub",
+		"unpublish",
+		"vuepress"
+	],
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"npm.packageManager": "yarn"
+}
