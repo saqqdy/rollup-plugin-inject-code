@@ -42,7 +42,7 @@ const options: RollupOptions = {
 }
 
 function externalCjsEsm(id: string) {
-	return ['consola', 'js-cool', 'tslib', 'core-js', '@babel/runtime'].some(
+	return ['terser', 'consola', 'js-cool', 'tslib', 'core-js', '@babel/runtime'].some(
 		k => id === k || new RegExp('^' + k + sep).test(id)
 	)
 }
