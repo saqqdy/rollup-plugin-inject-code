@@ -16,7 +16,7 @@ A rollup plugin for inject codes
 
 <div style="text-align: center; margin-bottom: 20px;" align="center">
 
-## **For API documentation, see: [API Docs](./docs/modules.md)**
+### **[Documentation](https://www.saqqdy.com/rollup-plugin-inject-code)** • **[Change Log](./CHANGELOG.md)**
 
 </div>
 
@@ -73,22 +73,22 @@ module.exports = {
 import type { Plugin } from 'rollup'
 
 export interface MinifyOptions {
-    compress?: boolean | CompressOptions
-    ecma?: ECMA
-    enclose?: boolean | string
-    ie8?: boolean
-    keep_classnames?: boolean | RegExp
-    keep_fnames?: boolean | RegExp
-    mangle?: boolean | MangleOptions
-    module?: boolean
-    nameCache?: object
-    format?: FormatOptions
-    /** @deprecated */
-    output?: FormatOptions
-    parse?: ParseOptions
-    safari10?: boolean
-    sourceMap?: boolean | SourceMapOptions
-    toplevel?: boolean
+  compress?: boolean | CompressOptions
+  ecma?: ECMA
+  enclose?: boolean | string
+  ie8?: boolean
+  keep_classnames?: boolean | RegExp
+  keep_fnames?: boolean | RegExp
+  mangle?: boolean | MangleOptions
+  module?: boolean
+  nameCache?: object
+  format?: FormatOptions
+  /** @deprecated */
+  output?: FormatOptions
+  parse?: ParseOptions
+  safari10?: boolean
+  sourceMap?: boolean | SourceMapOptions
+  toplevel?: boolean
 }
 
 /**
@@ -103,59 +103,59 @@ declare function injectCode(options: OptionsCode): Plugin
 export default injectCode
 
 export declare interface Options {
-    /**
-     * for es6 import
-     *
-     * @example ''
-     */
-    /**
-     * for es6 export
-     *
-     * @example ''
-     */
-    /**
-     * for node require
-     *
-     * @example ''
-     */
-    /**
-     * for node exports
-     *
-     * @example ''
-     */
-    position?: 'before' | 'after'
-    /**
-     * A string to prepend to the bundle
-     */
-    intro?: string
-    /**
-     * A string to append to the bundle
-     */
-    outro?: string
-    /**
-     * minify the codes
-     */
-    minify?: boolean
-    /**
-     * minify options for terser
-     */
-    minifyOptions?: MinifyOptions
+  /**
+   * for es6 import
+   *
+   * @example ''
+   */
+  /**
+   * for es6 export
+   *
+   * @example ''
+   */
+  /**
+   * for node require
+   *
+   * @example ''
+   */
+  /**
+   * for node exports
+   *
+   * @example ''
+   */
+  position?: 'before' | 'after'
+  /**
+   * A string to prepend to the bundle
+   */
+  intro?: string
+  /**
+   * A string to append to the bundle
+   */
+  outro?: string
+  /**
+   * minify the codes
+   */
+  minify?: boolean
+  /**
+   * minify options for terser
+   */
+  minifyOptions?: MinifyOptions
 }
 
 export declare interface OptionsCode extends Options {
-    /**
-     * inject code string
-     * @description Only one of “path” and “code” needs to be passed in, and "path" has higher priority than "code" when both are passed in
-     */
-    code: string
+  /**
+   * inject code string
+   * @description Only one of “path” and “code” needs to be passed in, and "path" has higher priority than "code" when both are passed in
+   */
+  code: string
 }
 
 export declare interface OptionsPath extends Options {
-    /**
-     * inject code path
-     * @description Only one of “path” and “code” needs to be passed in, and "path" has higher priority than "code" when both are passed in
-     */
-    path: string
+  /**
+   * inject code path
+   * @description Only one of “path” and “code” needs to be passed in, and "path" has higher priority than "code" when both are passed in
+   */
+  path: string
 }
 ```
 
