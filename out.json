@@ -1,0 +1,1058 @@
+{
+	"id": 0,
+	"name": "index.md",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "Options",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "intro",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A string to prepend to the bundle"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 35,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L35"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 5,
+					"name": "minify",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "minify the codes"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 43,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L43"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 6,
+					"name": "minifyOptions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "minify options for terser"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 47,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L47"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/terser@5.17.6/node_modules/terser/tools/terser.d.ts",
+							"qualifiedName": "MinifyOptions"
+						},
+						"name": "MinifyOptions",
+						"package": "terser"
+					}
+				},
+				{
+					"id": 4,
+					"name": "outro",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A string to append to the bundle"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 39,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L39"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 2,
+					"name": "position",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "for node exports"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\n''\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 31,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L31"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "before"
+							},
+							{
+								"type": "literal",
+								"value": "after"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						3,
+						5,
+						6,
+						4,
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 6,
+					"character": 17,
+					"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L6"
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"target": 7,
+					"name": "OptionsPath"
+				},
+				{
+					"type": "reference",
+					"target": 14,
+					"name": "OptionsCode"
+				}
+			]
+		},
+		{
+			"id": 14,
+			"name": "OptionsCode",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 15,
+					"name": "code",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "inject code string"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@description",
+								"content": [
+									{
+										"kind": "text",
+										"text": "Only one of “path” and “code” needs to be passed in, and \"path\" has higher priority than \"code\" when both are passed in"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 63,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L63"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 17,
+					"name": "intro",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A string to prepend to the bundle"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 35,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L35"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 3,
+						"name": "Options.intro"
+					}
+				},
+				{
+					"id": 19,
+					"name": "minify",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "minify the codes"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 43,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L43"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 5,
+						"name": "Options.minify"
+					}
+				},
+				{
+					"id": 20,
+					"name": "minifyOptions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "minify options for terser"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 47,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L47"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/terser@5.17.6/node_modules/terser/tools/terser.d.ts",
+							"qualifiedName": "MinifyOptions"
+						},
+						"name": "MinifyOptions",
+						"package": "terser"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 6,
+						"name": "Options.minifyOptions"
+					}
+				},
+				{
+					"id": 18,
+					"name": "outro",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A string to append to the bundle"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 39,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L39"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 4,
+						"name": "Options.outro"
+					}
+				},
+				{
+					"id": 16,
+					"name": "position",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "for node exports"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\n''\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 31,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L31"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "before"
+							},
+							{
+								"type": "literal",
+								"value": "after"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 2,
+						"name": "Options.position"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						15,
+						17,
+						19,
+						20,
+						18,
+						16
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 58,
+					"character": 17,
+					"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L58"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": 1,
+					"name": "Options",
+					"package": "rollup-plugin-inject-code"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"name": "OptionsPath",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 10,
+					"name": "intro",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A string to prepend to the bundle"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 35,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L35"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 3,
+						"name": "Options.intro"
+					}
+				},
+				{
+					"id": 12,
+					"name": "minify",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "minify the codes"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 43,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L43"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 5,
+						"name": "Options.minify"
+					}
+				},
+				{
+					"id": 13,
+					"name": "minifyOptions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "minify options for terser"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 47,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L47"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/terser@5.17.6/node_modules/terser/tools/terser.d.ts",
+							"qualifiedName": "MinifyOptions"
+						},
+						"name": "MinifyOptions",
+						"package": "terser"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 6,
+						"name": "Options.minifyOptions"
+					}
+				},
+				{
+					"id": 11,
+					"name": "outro",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A string to append to the bundle"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 39,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L39"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 4,
+						"name": "Options.outro"
+					}
+				},
+				{
+					"id": 8,
+					"name": "path",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "inject code path"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@description",
+								"content": [
+									{
+										"kind": "text",
+										"text": "Only one of “path” and “code” needs to be passed in, and \"path\" has higher priority than \"code\" when both are passed in"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 55,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L55"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 9,
+					"name": "position",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "for node exports"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\n''\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 31,
+							"character": 1,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L31"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "before"
+							},
+							{
+								"type": "literal",
+								"value": "after"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": 2,
+						"name": "Options.position"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						10,
+						12,
+						13,
+						11,
+						8,
+						9
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 50,
+					"character": 17,
+					"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L50"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": 1,
+					"name": "Options",
+					"package": "rollup-plugin-inject-code"
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "default",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 72,
+					"character": 9,
+					"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L72"
+				},
+				{
+					"fileName": "index.ts",
+					"line": 73,
+					"character": 9,
+					"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L73"
+				},
+				{
+					"fileName": "index.ts",
+					"line": 74,
+					"character": 9,
+					"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L74"
+				}
+			],
+			"signatures": [
+				{
+					"id": 22,
+					"name": "default",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A rollup plugin for inject codes"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "Plugin - injectCode plugin"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 72,
+							"character": 0,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L72"
+						}
+					],
+					"parameters": [
+						{
+							"id": 23,
+							"name": "options",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "options"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"target": 7,
+								"name": "OptionsPath",
+								"package": "rollup-plugin-inject-code"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/rollup@3.23.0/node_modules/rollup/dist/rollup.d.ts",
+							"qualifiedName": "Plugin"
+						},
+						"name": "Plugin",
+						"package": "rollup"
+					}
+				},
+				{
+					"id": 24,
+					"name": "default",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 73,
+							"character": 0,
+							"url": "https://github.com/saqqdy/rollup-plugin-inject-code/blob/68626f2/src/index.ts#L73"
+						}
+					],
+					"parameters": [
+						{
+							"id": 25,
+							"name": "options",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 14,
+								"name": "OptionsCode",
+								"package": "rollup-plugin-inject-code"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/rollup@3.23.0/node_modules/rollup/dist/rollup.d.ts",
+							"qualifiedName": "Plugin"
+						},
+						"name": "Plugin",
+						"package": "rollup"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				1,
+				14,
+				7
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				21
+			]
+		}
+	],
+	"packageName": "rollup-plugin-inject-code",
+	"packageVersion": "1.1.0",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "<div style=\"text-align: center;\" align=\"center\">\n\n# rollup-plugin-inject-code\n\nA rollup plugin for inject codes\n\n[![NPM version][npm-image]][npm-url]\n[![Codacy Badge][codacy-image]][codacy-url]\n[![Test coverage][codecov-image]][codecov-url]\n[![npm download][download-image]][download-url]\n[![License][license-image]][license-url]\n\n[![Sonar][sonar-image]][sonar-url]\n\n</div>\n\n<div style=\"text-align: center; margin-bottom: 20px;\" align=\"center\">\n\n### **[Documentation](https://www.saqqdy.com/rollup-plugin-inject-code)** • **[Change Log](./CHANGELOG.md)**\n\n</div>\n\n## Installing\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n# use pnpm\n$ pnpm install -D rollup-plugin-inject-code\n\n# use npm\n$ npm install -D rollup-plugin-inject-code\n\n# use yarn\n$ yarn add -D rollup-plugin-inject-code\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Usage\n\n1. use import\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```js\n// rollup.config.js\nimport injectCode from 'rollup-plugin-inject-code'\n\nexport default {\n  plugins: [\n    injectCode({\n      path: './node_modules/axios-serializer/dist/index.min.js',\n      position: 'before'\n    })\n  ]\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n2. use require\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```js\n// rollup.config.js\nconst injectCode = require('rollup-plugin-inject-code')\n\nmodule.exports = {\n  plugins: [\n    injectCode({\n      path: './node_modules/axios-serializer/dist/index.min.js',\n      position: 'before'\n    })\n  ]\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Types\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport type { Plugin } from 'rollup'\n\nexport interface MinifyOptions {\n  compress?: boolean | CompressOptions\n  ecma?: ECMA\n  enclose?: boolean | string\n  ie8?: boolean\n  keep_classnames?: boolean | RegExp\n  keep_fnames?: boolean | RegExp\n  mangle?: boolean | MangleOptions\n  module?: boolean\n  nameCache?: object\n  format?: FormatOptions\n  /** @deprecated */\n  output?: FormatOptions\n  parse?: ParseOptions\n  safari10?: boolean\n  sourceMap?: boolean | SourceMapOptions\n  toplevel?: boolean\n}\n\n/**\n * A rollup plugin for inject codes\n *\n * @param options - options\n * @returns Plugin - injectCode plugin\n */\ndeclare function injectCode(options: OptionsPath): Plugin\n\ndeclare function injectCode(options: OptionsCode): Plugin\nexport default injectCode\n\nexport declare interface Options {\n  /**\n   * for es6 import\n   *\n   * @example ''\n   */\n  /**\n   * for es6 export\n   *\n   * @example ''\n   */\n  /**\n   * for node require\n   *\n   * @example ''\n   */\n  /**\n   * for node exports\n   *\n   * @example ''\n   */\n  position?: 'before' | 'after'\n  /**\n   * A string to prepend to the bundle\n   */\n  intro?: string\n  /**\n   * A string to append to the bundle\n   */\n  outro?: string\n  /**\n   * minify the codes\n   */\n  minify?: boolean\n  /**\n   * minify options for terser\n   */\n  minifyOptions?: MinifyOptions\n}\n\nexport declare interface OptionsCode extends Options {\n  /**\n   * inject code string\n   * @description Only one of “path” and “code” needs to be passed in, and \"path\" has higher priority than \"code\" when both are passed in\n   */\n  code: string\n}\n\nexport declare interface OptionsPath extends Options {\n  /**\n   * inject code path\n   * @description Only one of “path” and “code” needs to be passed in, and \"path\" has higher priority than \"code\" when both are passed in\n   */\n  path: string\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Support & Issues\n\nPlease open an issue [here](https://github.com/saqqdy/rollup-plugin-inject-code/issues).\n\n## License\n\n[MIT](LICENSE)\n\n[npm-image]: https://img.shields.io/npm/v/rollup-plugin-inject-code.svg?style=flat-square\n[npm-url]: https://npmjs.org/package/rollup-plugin-inject-code\n[codacy-image]: https://app.codacy.com/project/badge/Grade/f70d4880e4ad4f40aa970eb9ee9d0696\n[codacy-url]: https://www.codacy.com/gh/saqqdy/rollup-plugin-inject-code/dashboard?utm_source=github.com&utm_medium=referral&utm_content=saqqdy/rollup-plugin-inject-code&utm_campaign=Badge_Grade\n[codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/rollup-plugin-inject-code.svg?style=flat-square\n[codecov-url]: https://codecov.io/github/saqqdy/rollup-plugin-inject-code?branch=master\n[download-image]: https://img.shields.io/npm/dm/rollup-plugin-inject-code.svg?style=flat-square\n[download-url]: https://npmjs.org/package/rollup-plugin-inject-code\n[license-image]: https://img.shields.io/badge/License-MIT-blue.svg\n[license-url]: LICENSE\n[sonar-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=saqqdy_rollup-plugin-inject-code\n[sonar-url]: https://sonarcloud.io/dashboard?id=saqqdy_rollup-plugin-inject-code"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options"
+		},
+		"2": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.position"
+		},
+		"3": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.intro"
+		},
+		"4": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.outro"
+		},
+		"5": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.minify"
+		},
+		"6": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.minifyOptions"
+		},
+		"7": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "OptionsPath"
+		},
+		"8": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "OptionsPath.path"
+		},
+		"9": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.position"
+		},
+		"10": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.intro"
+		},
+		"11": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.outro"
+		},
+		"12": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.minify"
+		},
+		"13": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.minifyOptions"
+		},
+		"14": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "OptionsCode"
+		},
+		"15": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "OptionsCode.code"
+		},
+		"16": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.position"
+		},
+		"17": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.intro"
+		},
+		"18": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.outro"
+		},
+		"19": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.minify"
+		},
+		"20": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "Options.minifyOptions"
+		},
+		"21": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "injectCode"
+		},
+		"22": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "injectCode"
+		},
+		"23": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "options"
+		},
+		"24": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "injectCode"
+		},
+		"25": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "options"
+		}
+	}
+}
