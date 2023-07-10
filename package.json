@@ -51,7 +51,7 @@
 		"@types/jest": "^29.5.1",
 		"@types/node": "^20.2.4",
 		"chalk": "^5.2.0",
-		"consola": "^2.15.3",
+		"consola": "^3.2.3",
 		"core-js": "^3.30.2",
 		"coveralls": "^3.1.1",
 		"cross-env": "^7.0.3",
