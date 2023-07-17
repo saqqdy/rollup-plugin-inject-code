@@ -35,7 +35,7 @@
 		"prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,yml,json,md}\""
 	},
 	"dependencies": {
-		"js-cool": "^4.4.0",
+		"js-cool": "^5.2.0",
 		"terser": "^5.17.6"
 	},
 	"devDependencies": {
